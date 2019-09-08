@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<title>Homepage</title>
+
+{% extends 'base.html' %} {% block body_block %}
+
+<!-- Using template filters -->
+<h3>{{ heading | title }}</h3>
+<h6>{{ ending | cut:"khan" }}</h6>
+
+{% endblock body_block %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} {% block body_block %} {% load staticfiles%}
+<title>Users</title>
+<h2>Here is the list of all the users</h2>
+
+{% if user_list %}
+<ol>
+  {% for record in user_list %}
+  <li>
+    User Info
+    <ul>
+      <li>First name: {{ record.first_name }}</li>
+      <li>Last name: {{ record.last_name }}</li>
+      <li>Email: {{ record.email }}</li>
+    </ul>
+  </li>
+  {% endfor %}
+</ol>
+
+{% else %}
+<p>No user record found!</p>
+{% endif %} {% endblock body_block %}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends 'base.html' %} {% block body_block %}
+<title>Sign up</title>
+<a href="{% url 'homepage' %}">Go to homepage</a>
+<a href="{% url 'second_app:users' %}">Go to users</a>
+<h3 class="jumbotron">Sign up</h3>
+<div class="container">
+  <form method="POST" action="">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary" />
+  </form>
+</div>
+{% endblock body_block %}
